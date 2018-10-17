@@ -6,7 +6,6 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
-
 class User extends Authenticatable
 {
     use Notifiable,EntrustUserTrait;
@@ -31,7 +30,6 @@ class User extends Authenticatable
 
     public function detail()
     {
-       return $this->hasOne(Detail::class,'id_user','id');
+        return $this->hasOne(Detail::class, 'id_user', 'id');
     }
-    
 }
